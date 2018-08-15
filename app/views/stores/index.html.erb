@@ -1,0 +1,11 @@
+<h1>Store List!</h1>
+
+  <% @stores.each do |s| %>
+  <li>
+  <ul>
+  Name: <%= link_to s.name, store_path(s) %>
+  Location: <%= s.location %>
+  Capacity: <%= s.capacity %>
+  </ul>
+</li>
+  <% end %>

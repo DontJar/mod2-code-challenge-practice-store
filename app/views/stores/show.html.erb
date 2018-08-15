@@ -1,0 +1,12 @@
+<h1>Here's a store called <%= @store.name %>.
+
+  <% @store.customers.each do |c| %><br>
+  <%= c.name %>
+  <% end %>
+
+  <%= link_to "Index Page", stores_path %>
+
+  <%= link_to "edit", edit_store_path(@store) %>
+  <%= form_tag store_path(@store.id), method: "delete" do %>
+  <%= submit_tag "Delete" %>
+<% end %>
